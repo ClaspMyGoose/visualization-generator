@@ -7,6 +7,11 @@ const UploadForm = () => {
   const submitFile = async (e) => {
     e.preventDefault();
     
+    if (!file) {
+      return alert('Please upload a .csv file!'); 
+    }
+
+
     const data = new FormData(); 
     data.append('data', file); 
 
